@@ -1,0 +1,245 @@
+html {
+  height: 100%;
+}
+
+html > body {
+  margin: 0px;
+  font-family:myriad-pro, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  overflow-y: hidden;
+  height: 100%;
+}
+
+html > body > header,
+html > body > article,
+html > body > footer{
+  width : 100%;
+}
+
+/* ########################################################### */
+/* ### HEADER ################################################ */
+/* ########################################################### */
+
+html > body > header{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),
+              0 1px 10px 0 rgba(0,0,0,0.12),
+              0 2px 4px -1px rgba(0,0,0,0.3);
+}
+
+html > body > header > #top,
+html > body > header > #menu{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+html > body > header > #top{
+  display: inline-table;
+  padding: 10px;
+  background-color : #dddddd;
+}
+
+html > body > header > #top > .left{
+  float: left;
+}
+
+html > body > header > #top > .left > img {
+  margin: 0px;
+  width: 200px;
+  
+}
+
+html > body > header > #top > .left > h1:last-child{
+  padding-left: 50px;
+}
+
+html > body > header > #top > .right{
+  float: right;
+}
+
+html > body > header > #top > .right > a{
+  color: black;
+  float: left;
+}
+
+html > body > header > #top > .right > a > i{
+  font-size: 50px;
+  line-height: 76px;
+  margin: 0px 10px;
+}
+
+html > body > header > #top > .right > a > .icon{
+  float: left;
+  margin: 0px 10px;
+}
+
+html > body > header > #top > .right > a > .circle{
+  height: 48px;
+  width: 48px;
+  text-align: center;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 14px;
+}
+
+html > body > header > #top > .right > a > .circle > i{
+  line-height: 48px;
+  color : #d7dad7;
+  font-size: 30px;
+}
+
+html > body > header > #menu{
+  background-color: #004153;
+}
+
+html > body > header > #menu > ul{
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  width: 100%;
+  list-style: none;
+}
+
+html > body > header > #menu > ul > li{
+  float: left;
+  width: calc(100% / 3);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+html > body > header > #menu > ul > li > a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ########################################################### */
+/* ### ARTICLE ############################################### */
+/* ########################################################### */
+
+html > body > article{
+  background-color : #8e9494;
+  max-height: calc(100% - 159px);
+  overflow-y: auto;
+  position: absolute;
+  top: 159px;
+  left: 0px;
+}
+
+html > body > article > #content{
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+html > body > article > #content > #image{
+  display: block;
+  margin: 0px auto;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-image: url(IMG_5658.jpg);
+}
+
+html > body > article > #content > p{
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+html > body > article > #content > .line{
+  display: inline-block;
+  margin: 20px 0px;
+}
+
+html > body > article > #content > .line > div{
+  max-width: 60%;
+  padding: 10px;
+  color: white;
+}
+
+html > body > article > #content > .line:nth-child(even) > div{
+  background: #004153;
+  float: left;
+}
+
+html > body > article > #content > .line:nth-child(odd) > div{
+  background:  black;
+  
+  float: right;
+}
+
+html > body > article > #content > .line > div > .left,
+html > body > article > #content > .line > div > .right{
+  width: 50%;
+}
+
+html > body > article > #content > .line > div > .left {
+  float: left;
+}
+
+html > body > article > #content > .line > div > .right {
+  float: right;
+}
+
+/* ########################################################### */
+/* ### FOOTER ################################################ */
+/* ########################################################### */
+
+html > body > article > footer{
+  height : 50px;
+  background-color : #c9ccca;
+  display: inline-table;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+html > body > article > footer > .left{
+  float : left;
+}
+
+html > body > article > footer > .left > p{
+  margin: 0px;
+}
+
+/* ########################################################### */
+/* ### RESPONSIVE ############################################ */
+/* ########################################################### */
+
+@media screen and (max-width: 600px) {
+  html > body > header > #top > .right{
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+  
+  html > body > article{
+    top: 235px;
+    max-height: calc(100% - 235px);
+  }
+  
+  html > body > article > #content > .line > div > .left,
+  html > body > article > #content > .line > div > .right{
+    width: 100%;
+  }
+ 
+  html > body > article > #content > .line > div > .right{
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html > body > article > #content > .line > div{
+    max-width: 100%;
+  }
+}
